@@ -1,6 +1,6 @@
 package q.jv.dao;
 
-public class DaoImp2  implements IDao{
+public class DaoImpl2 implements IDao{
 
     @Override
     public double getData() {

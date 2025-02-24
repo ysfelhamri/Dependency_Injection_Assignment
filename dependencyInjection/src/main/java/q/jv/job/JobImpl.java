@@ -5,6 +5,14 @@ import q.jv.dao.IDao;
 public class JobImpl implements IJob{
 
     private IDao dao;
+
+    public JobImpl() {
+    }
+
+    public JobImpl(IDao dao) {
+        this.dao = dao;
+    }
+
     @Override
     public double calc() {
         double temp = dao.getData();

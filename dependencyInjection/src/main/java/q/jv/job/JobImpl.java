@@ -1,18 +1,20 @@
 package q.jv.job;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-import q.jv.dao.IDao;
 
-@Service("metier")
+import org.springframework.beans.factory.annotation.Autowired;
+import q.jv.dao.IDao;
+import org.springframework.stereotype.Component;
+
+@Component("job")
 public class JobImpl implements IJob{
 
+    @Autowired
     private IDao dao;
 
     public JobImpl() {
     }
 
-    public JobImpl(@Qualifier("dao2") IDao dao) {
+    public JobImpl(IDao dao) {
         this.dao = dao;
     }
 
